@@ -13,7 +13,7 @@ const ProfilePage = ({ resident }) => {
             className="profile-image"
           />
           <h1 className="profile-name">{resident.name}</h1>
-          <p className="profile-unit">{resident.unit}</p>
+          <p className="profile-unit">{resident.role}</p>
 
           <div className="contact-info">
             <div className="contact-item">
@@ -32,7 +32,7 @@ const ProfilePage = ({ resident }) => {
 
           <div className="additional-notes">
             <h3>📝 Additional Notes:</h3>
-            <p>{resident.notes}</p>
+            <p>{resident.interests}</p>
           </div>
         </div>
       </div>

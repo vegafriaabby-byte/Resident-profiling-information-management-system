@@ -4,60 +4,80 @@ import ProfilePage from "./ProfilePage"
 
 const residents = [
   {
-    name: "Olivia Chen",
-    unit: "Unit 305",
-    email: "olivia.chen@example.com",
-    phone: "(555) 123-4567",
-    emergency: "Daniel Chen ((555) 987-6543)",
-    notes: "Software engineer, active in community events.",
-    image: "/user.jpg"
+    name: "Nena Alonsagay",
+    email: "nenaalonsagay@gmail.com",
+    phone: "(0917) 123-4567",
+    emergency: "Evan Alonsagay (0917 765-4321)",
+    role: "Business Owner",
+    interests: "Owner of an eatery",
+    image: "/nena.png"
   },
   {
-    name: "John Doe",
-    unit: "Unit 102",
-    email: "john.doe@example.com",
-    phone: "(555) 555-1212",
-    emergency: "Jane Doe ((555) 999-8888)",
-    notes: "Teacher, enjoys helping with tutoring programs.",
-    image: "/user.jpg"
+    name: "Merigold Besmonte",
+    email: "merigold@yahoo.com",
+    phone: "(0922) 234-5678",
+    emergency: "Nena Alonsagay (0917 123-4567)",
+    role: "Worker",
+    interests: "Supports local businesses",
+    image: "/merigold.png"
   },
   {
-    name: "Maria Santos",
-    unit: "Unit 210",
-    email: "maria.santos@example.com",
-    phone: "(555) 456-7890",
-    emergency: "Carlos Santos ((555) 111-2222)",
-    notes: "Nurse, volunteers at community health drives.",
-    image: "/user.jpg"
+    name: "Lalaine Manzo",
+    email: "lalaine@gmail.com",
+    phone: "(0933) 345-6789",
+    emergency: "No emergency contact",
+    role: "Barangay Captain",
+    interests: "Leads the community and provides services",
+    image: "/lalaine.png"
   },
   {
-    name: "David Kim",
-    unit: "Unit 407",
-    email: "david.kim@example.com",
-    phone: "(555) 321-6543",
-    emergency: "Grace Kim ((555) 222-3333)",
-    notes: "Engineer, organizes weekend basketball games.",
-    image: "/user.jpg"
+    name: "Lois Alonsagay",
+    email: "lois@gmail.com",
+    phone: "(0944) 456-7890",
+    emergency: "Jhanin Alonsagay (0944 098-7654)",
+    role: "Engineer",
+    interests: "Works on engineering projects",
+    image: "/lois.png"
   },
   {
-    name: "Sophia Lee",
-    unit: "Unit 509",
-    email: "sophia.lee@example.com",
-    phone: "(555) 789-1234",
-    emergency: "Michael Lee ((555) 444-5555)",
-    notes: "Artist, helps with mural painting in community areas.",
-    image: "/user.jpg"
+    name: "Fritz Ivan Alonsagay",
+    email: "fritzivan@gmail.com",
+    phone: "(0955) 567-8901",
+    emergency: "Hazel Ann Alonsagay (0955 109-8765)",
+    role: "Chemist / Business Owner",
+    interests: "Sells shirts online",
+    image: "/fritz.png"
   },
   {
-    name: "James Smith",
-    unit: "Unit 601",
-    email: "james.smith@example.com",
-    phone: "(555) 888-9999",
-    emergency: "Anna Smith ((555) 777-6666)",
-    notes: "Retired firefighter, shares safety tips during events.",
+    name: "Abegail Vegafria",
+    email: "abegail@gmail.com",
+    phone: "(0966) 678-9012",
+    emergency: "Nena Alonsagay (0966 210-9876)",
+    role: "Student",
+    interests: "Helps with community events",
+    image: "/abegail.png"
+  },
+  {
+    name: "Joval Galang",
+    email: "joval@gmail.com",
+    phone: "(0966) 677-8812",
+    emergency: "Fritz Alonsagay (0966 210-9876)",
+    role: "Psychiatrist",
+    interests: "Helps with community events",
+    image: "/joval.png"
+  },
+  {
+    name: "Evan Alonsagay",
+    email: "evan@gmail.com",
+    phone: "(0966) 688-2012",
+    emergency: "Ofelia Alonsagay (0966 210-9876)",
+    role: "Laundry Worker",
+    interests: "None",
     image: "/user.jpg"
   }
 ]
+
+
 
 const DirectoryPage = () => {
   const [selectedResident, setSelectedResident] = useState(null)
@@ -85,7 +105,7 @@ const DirectoryPage = () => {
                 className="resident-image"
               />
               <h2 className="resident-name">{resident.name}</h2>
-              <p className="resident-unit">{resident.unit}</p>
+              <p className="resident-unit">{resident.phone}</p>
               <button
                 className="view-profile-btn"
                 onClick={() => setSelectedResident(resident)}
