@@ -36,8 +36,8 @@ const Header = ({ currentPage, setCurrentPage }) => {
           </button>
         </nav>
         <button className="login-btn" onClick={() => setCurrentPage("login")}>
-          <span className="login-icon">👤</span>
-          Login
+          <span className="login-icon"></span>
+          👤Login
         </button>
       </div>
     </header>

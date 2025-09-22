@@ -14,19 +14,20 @@ import "./App.css"
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home")
+  const [selectedResident, setSelectedResident] = useState(null)
 
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        return <HomePage />
+        return <HomePage setCurrentPage={setCurrentPage} />;
       case "residents":
-        return <DirectoryPage />
+        return <DirectoryPage setCurrentPage={setCurrentPage} setSelectedResident={setSelectedResident} />
       case "about":
         return <AboutPage />
       case "contact":
         return <ContactPage />
       case "profile":
-        return <ProfilePage />
+        return <ProfilePage resident={selectedResident} />
       case "login":
         return <LoginPage setCurrentPage={setCurrentPage} />
       case "signup":

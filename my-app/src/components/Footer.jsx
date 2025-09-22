@@ -30,7 +30,6 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p className="footer-credit">Made with ❤️ Visily</p>
       </div>
     </footer>
   )

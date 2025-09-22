@@ -1,18 +1,31 @@
+/* HEADER CONTAINER */
 .header {
   background: white;
   border-bottom: 1px solid #e5e7eb;
   padding: 1rem 0;
 }
 
+/* HEADER CONTENT: FLEX CONTAINER */
 .header-content {
+  display: flex;
+  justify-content: space-between; /* logo+nav left, login right */
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
+  width: 100%; /* ensure full width */
+  padding: 0 1rem; /* optional small padding, adjust as needed */
+  box-sizing: border-box;
 }
 
+/* LEFT SIDE: LOGO + NAV */
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* spacing between logo and nav */
+  flex-shrink: 0; /* prevents shrinking and pushing login */
+}
+
+/* LOGO */
 .logo-text {
   font-size: 1.5rem;
   font-weight: bold;
@@ -20,6 +33,7 @@
   font-style: italic;
 }
 
+/* NAVIGATION LINKS */
 .nav {
   display: flex;
   gap: 2rem;
@@ -28,11 +42,12 @@
 .nav-link {
   background: none;
   border: none;
-  color: #6b7280;
+  color: #0b0d12;
   font-size: 0.95rem;
   cursor: pointer;
   padding: 0.5rem 0;
   transition: color 0.2s;
+  font-weight: 500;
 }
 
 .nav-link:hover,
@@ -40,24 +55,29 @@
   color: #3b82f6;
 }
 
+/* LOGIN BUTTON */
 .login-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: none;
-  border: none;
-  color: #6b7280;
-  font-size: 0.95rem;
+  background: none !important;
+  border: none !important;
+  color: #111827 !important; /* near black, guaranteed visible */
+  font-size: 0.95rem !important;
+  font-weight: 500;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  transition: background-color 0.2s;
+  display: flex;
+  align-items: justify;
+  gap: 42rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  outline: none !important;
+  margin-right: auto;
 }
 
 .login-btn:hover {
-  background-color: #f3f4f6;
+  color: #3b82f6 !important; /* blue hover */
+  background: none !important;
 }
 
+/* LOGIN ICON */
 .login-icon {
   font-size: 1rem;
 }

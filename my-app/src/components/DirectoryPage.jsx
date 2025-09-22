@@ -1,42 +1,97 @@
+import { useState } from "react"
 import "./DirectoryPage.css"
+import ProfilePage from "./ProfilePage"
+
+const residents = [
+  {
+    name: "Olivia Chen",
+    unit: "Unit 305",
+    email: "olivia.chen@example.com",
+    phone: "(555) 123-4567",
+    emergency: "Daniel Chen ((555) 987-6543)",
+    notes: "Software engineer, active in community events.",
+    image: "/user.jpg"
+  },
+  {
+    name: "John Doe",
+    unit: "Unit 102",
+    email: "john.doe@example.com",
+    phone: "(555) 555-1212",
+    emergency: "Jane Doe ((555) 999-8888)",
+    notes: "Teacher, enjoys helping with tutoring programs.",
+    image: "/user.jpg"
+  },
+  {
+    name: "Maria Santos",
+    unit: "Unit 210",
+    email: "maria.santos@example.com",
+    phone: "(555) 456-7890",
+    emergency: "Carlos Santos ((555) 111-2222)",
+    notes: "Nurse, volunteers at community health drives.",
+    image: "/user.jpg"
+  },
+  {
+    name: "David Kim",
+    unit: "Unit 407",
+    email: "david.kim@example.com",
+    phone: "(555) 321-6543",
+    emergency: "Grace Kim ((555) 222-3333)",
+    notes: "Engineer, organizes weekend basketball games.",
+    image: "/user.jpg"
+  },
+  {
+    name: "Sophia Lee",
+    unit: "Unit 509",
+    email: "sophia.lee@example.com",
+    phone: "(555) 789-1234",
+    emergency: "Michael Lee ((555) 444-5555)",
+    notes: "Artist, helps with mural painting in community areas.",
+    image: "/user.jpg"
+  },
+  {
+    name: "James Smith",
+    unit: "Unit 601",
+    email: "james.smith@example.com",
+    phone: "(555) 888-9999",
+    emergency: "Anna Smith ((555) 777-6666)",
+    notes: "Retired firefighter, shares safety tips during events.",
+    image: "/user.jpg"
+  }
+]
 
 const DirectoryPage = () => {
-  const residents = [
-    { id: 1, name: "Alice Smith", unit: "Unit 101", image: "/professional-woman-diverse.png" },
-    { id: 2, name: "Bob Johnson", unit: "Unit 203", image: "/smiling-man.png" },
-    { id: 3, name: "Charlie Brown", unit: "Unit 305", image: "/friendly-person.jpg" },
-    { id: 4, name: "Diana Miller", unit: "Unit 407", image: "/professional-woman-diverse.png" },
-    { id: 5, name: "Eve Davis", unit: "Unit 509", image: "/woman-portrait.png" },
-    { id: 6, name: "Frank White", unit: "Unit 611", image: "/thoughtful-man-portrait.png" },
-    { id: 7, name: "Grace Taylor", unit: "Unit 713", image: "/diverse-woman-smiling.png" },
-    { id: 8, name: "Henry Moore", unit: "Unit 815", image: "/elderly-man-contemplative.png" },
-    { id: 9, name: "Ivy Clark", unit: "Unit 917", image: "/young-woman-smiling.png" },
-    { id: 10, name: "Jack Lewis", unit: "Unit 1019", image: "/middle-aged-man-contemplative.png" },
-  ]
+  const [selectedResident, setSelectedResident] = useState(null)
+
+  if (selectedResident) {
+    return <ProfilePage resident={selectedResident} />
+  }
 
   return (
     <div className="directory-page">
       <div className="directory-container">
         <div className="directory-header">
-          <h1 className="directory-title">Community Resident Directory</h1>
+          <h1 className="directory-title">Community Directory</h1>
           <p className="directory-subtitle">
-            Discover and connect with your neighbors in ResidentConnect. Find contact information and unit details for
-            every resident in our community.
+            Browse residents of <strong>Poblacion 4, Hamtic, Antique</strong> and view their profiles to stay connected and engaged in the community.
           </p>
-
-          <div className="search-container">
-            <input type="text" placeholder="Search residents by name or unit..." className="search-input" />
-            <button className="search-btn">Search</button>
-          </div>
         </div>
 
         <div className="residents-grid">
-          {residents.map((resident) => (
-            <div key={resident.id} className="resident-card">
-              <img src={resident.image || "/placeholder.svg"} alt={resident.name} className="resident-image" />
-              <h3 className="resident-name">{resident.name}</h3>
+          {residents.map((resident, index) => (
+            <div key={index} className="resident-card">
+              <img
+                src={resident.image}
+                alt={resident.name}
+                className="resident-image"
+              />
+              <h2 className="resident-name">{resident.name}</h2>
               <p className="resident-unit">{resident.unit}</p>
-              <button className="view-profile-btn">View Profile</button>
+              <button
+                className="view-profile-btn"
+                onClick={() => setSelectedResident(resident)}
+              >
+                View Profile
+              </button>
             </div>
           ))}
         </div>

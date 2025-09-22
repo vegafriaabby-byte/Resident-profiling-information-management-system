@@ -67,9 +67,11 @@
 
 .community-illustration {
   max-width: 100%;
-  height: auto;
+  height: 30rem; /* or any value you want */
   border-radius: 12px;
+  object-fit: cover; /* ensures image covers the height without distortion */
 }
+
 
 @media (max-width: 768px) {
   .hero-section {

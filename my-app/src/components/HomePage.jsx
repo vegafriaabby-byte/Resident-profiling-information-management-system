@@ -2,7 +2,8 @@
 
 import "./HomePage.css"
 
-const HomePage = () => {
+
+const HomePage = ({ setCurrentPage }) => {
   return (
     <div className="home-page">
       <div className="home-content">
@@ -16,15 +17,22 @@ const HomePage = () => {
               Community
             </h1>
             <p className="hero-description">
-              ResidentConnect is your essential community directory, designed to help you easily find and connect with
-              your neighbors, access important information, and foster a stronger, more vibrant community. Explore
-              profiles, stay informed, and engage effortlessly.
+              Resident Connect is your essential community directory for Poblacion 4,
+              Hamtic, Antique. Easily access and manage resident profiles,
+              find important local information, and stay connected with your neighbors.
+              Strengthen your community by exploring profiles, keeping up-to-date, and
+              engaging effortlessly with fellow residents.
             </p>
-            <button className="explore-btn">Explore Residents</button>
+            <button
+              className="explore-btn"
+              onClick={() => setCurrentPage("residents")}
+            >
+              Explore Residents
+            </button>
           </div>
           <div className="hero-image">
             <img
-              src="/community-people-gathering-in-park-with-trees.jpg"
+              src="/pob4.png"
               alt="Community gathering illustration"
               className="community-illustration"
             />
