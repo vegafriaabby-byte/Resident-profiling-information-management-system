@@ -48,7 +48,7 @@
   display: block;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #ffffff;   /* white label */
+  color: #ffffff;   
   margin-bottom: 0.5rem;
 }
 
@@ -56,11 +56,11 @@
 .form-group textarea {
   width: 100%;
   padding: 0.875rem;
-  background-color: #ffffff; /* white background */
-  border: 1px solid #dfcaca; /* white border */
+  background-color: #ffffff; 
+  border: 1px solid #dfcaca; 
   border-radius: 8px;
   font-size: 1rem;
-  color: #000000; /* black input text for readability */
+  color: #000000; 
   transition: border-color 0.2s;
   resize: vertical;
 }
@@ -74,7 +74,7 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #cccccc; /* light gray so visible on white */
+  color: #cccccc; 
 }
 
 .contact-submit-btn {

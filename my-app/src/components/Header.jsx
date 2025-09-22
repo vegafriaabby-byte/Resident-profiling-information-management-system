@@ -7,7 +7,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
     <header className="header">
       <div className="header-content">
         <div className="logo">
-          <span className="logo-text">logo</span>
+          <span className="logo-text">Resident Connect</span>
         </div>
         <nav className="nav">
           <button

@@ -9,19 +9,19 @@
 
 .login-container {
   width: 100%;
-  max-width: 350px; /* slightly narrower */
+  max-width: 350px; 
 }
 
 .login-form-wrapper {
   background: white;
-  padding: 1.5rem; /* reduced padding */
+  padding: 1.5rem; 
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
 .login-title {
-  font-size: 1.5rem; /* smaller title */
+  font-size: 1.5rem; 
   font-weight: bold;
   color: #1a1a1a;
   margin-bottom: 0.25rem;
@@ -29,7 +29,7 @@
 
 .login-subtitle {
   color: #666;
-  margin-bottom: 1.25rem; /* less margin */
+  margin-bottom: 1.25rem; 
   font-size: 0.9rem;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .form-group {
-  margin-bottom: 1rem; /* tighter spacing */
+  margin-bottom: 1rem; 
 }
 
 .form-group label {
@@ -51,7 +51,7 @@
 
 .form-group input {
   width: 100%;
-  padding: 0.65rem; /* smaller input height */
+  padding: 0.65rem; 
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 0.95rem;
@@ -75,7 +75,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-bottom: 1rem; /* reduced margin */
+  margin-bottom: 1rem; 
 }
 
 .login-btn:hover {

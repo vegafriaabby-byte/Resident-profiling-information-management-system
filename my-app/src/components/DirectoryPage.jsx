@@ -78,7 +78,6 @@ const residents = [
 ]
 
 
-
 const DirectoryPage = () => {
   const [selectedResident, setSelectedResident] = useState(null)
 

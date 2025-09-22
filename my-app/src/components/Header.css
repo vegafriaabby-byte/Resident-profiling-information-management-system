@@ -1,39 +1,26 @@
-/* HEADER CONTAINER */
 .header {
   background: white;
   border-bottom: 1px solid #e5e7eb;
   padding: 1rem 0;
 }
 
-/* HEADER CONTENT: FLEX CONTAINER */
 .header-content {
-  display: flex;
-  justify-content: space-between; /* logo+nav left, login right */
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%; /* ensure full width */
-  padding: 0 1rem; /* optional small padding, adjust as needed */
-  box-sizing: border-box;
-}
-
-/* LEFT SIDE: LOGO + NAV */
-.left-side {
   display: flex;
+  justify-content: space-between; 
   align-items: center;
-  gap: 2rem; /* spacing between logo and nav */
-  flex-shrink: 0; /* prevents shrinking and pushing login */
+  padding: 0 2rem;
 }
 
-/* LOGO */
 .logo-text {
   font-size: 1.5rem;
   font-weight: bold;
   color: #1f2937;
   font-style: italic;
+  white-space: nowrap;
 }
 
-/* NAVIGATION LINKS */
 .nav {
   display: flex;
   gap: 2rem;
@@ -42,7 +29,7 @@
 .nav-link {
   background: none;
   border: none;
-  color: #0b0d12;
+  color: #0f1115;
   font-size: 0.95rem;
   cursor: pointer;
   padding: 0.5rem 0;
@@ -55,29 +42,27 @@
   color: #3b82f6;
 }
 
-/* LOGIN BUTTON */
 .login-btn {
   background: none !important;
   border: none !important;
-  color: #111827 !important; /* near black, guaranteed visible */
+  color: #111827 !important;  
   font-size: 0.95rem !important;
   font-weight: 500;
   cursor: pointer;
   display: flex;
-  align-items: justify;
-  gap: 42rem;
+  align-items: center;
+  gap: 34rem;
   padding: 0 !important;
   margin: 0 !important;
   outline: none !important;
-  margin-right: auto;
+  white-space: nowrap;
 }
 
 .login-btn:hover {
-  color: #3b82f6 !important; /* blue hover */
+  color: #3b82f6 !important;  
   background: none !important;
 }
 
-/* LOGIN ICON */
 .login-icon {
   font-size: 1rem;
 }
