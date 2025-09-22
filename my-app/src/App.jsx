@@ -1,34 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+"use client"
+
+import { useState } from "react"
+import Header from "./components/Header"
+import HomePage from "./components/HomePage"
+import AboutPage from "./components/AboutPage"
+import ContactPage from "./components/ContactPage"
+import DirectoryPage from "./components/DirectoryPage"
+import ProfilePage from "./components/ProfilePage"
+import LoginPage from "./components/LoginPage"
+import SignUpPage from "./components/SignUpPage"
+import Footer from "./components/Footer"
+import "./App.css"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentPage, setCurrentPage] = useState("home")
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "home":
+        return <HomePage />
+      case "residents":
+        return <DirectoryPage />
+      case "about":
+        return <AboutPage />
+      case "contact":
+        return <ContactPage />
+      case "profile":
+        return <ProfilePage />
+      case "login":
+        return <LoginPage setCurrentPage={setCurrentPage} />
+      case "signup":
+        return <SignUpPage setCurrentPage={setCurrentPage} />
+      default:
+        return <HomePage />
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <main>{renderPage()}</main>
+      <Footer />
+    </div>
   )
 }
 
